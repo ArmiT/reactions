@@ -21,6 +21,9 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class UnassignedFromAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         $oldPerformer = $this->task->getOldAttribute('performer_id');
@@ -33,6 +36,9 @@ class UnassignedFromAction extends TaskChangeAction
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         $this->reaction->set(

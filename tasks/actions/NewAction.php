@@ -17,12 +17,18 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class NewAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         /*  */
         return $this->task->isNewRecord && $this->task->performer_id;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         $this->reaction->set(

@@ -21,6 +21,9 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class SendSmsAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         return (bool) \count(
@@ -28,6 +31,9 @@ class SendSmsAction extends TaskChangeAction
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         foreach ($this->reaction->getList() as $userId => $notificationName) {

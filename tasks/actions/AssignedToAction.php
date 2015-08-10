@@ -21,6 +21,9 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class AssignedToAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         return (
@@ -29,6 +32,9 @@ class AssignedToAction extends TaskChangeAction
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         $this->reaction->set(

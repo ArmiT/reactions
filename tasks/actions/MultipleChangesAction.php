@@ -17,6 +17,9 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class MultipleChangesAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         $dirtyAttributes =
@@ -25,6 +28,9 @@ class MultipleChangesAction extends TaskChangeAction
         return \count($dirtyAttributes) > 1;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         $this->reaction->set(

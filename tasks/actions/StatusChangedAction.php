@@ -17,11 +17,17 @@ use reaction_system\tasks\TaskChangeAction;
  */
 class StatusChangedAction extends TaskChangeAction
 {
+    /**
+     * {@inheritdoc}
+     */
     public function checkNecessity()
     {
         return $this->task->isAttributeChanged('status_id');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function execute()
     {
         $this->reaction->set(
