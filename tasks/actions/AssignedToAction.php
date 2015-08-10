@@ -22,7 +22,7 @@ class AssignedToAction extends TaskChangeAction
     public function checkNecessity()
     {
         return (
-            $this->task->isAttributeChanged('performer_id') &
+            $this->task->isAttributeChanged('performer_id') &&
             $this->task->performer_id !== NULL
         );
 

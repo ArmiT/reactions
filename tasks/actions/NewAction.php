@@ -17,7 +17,7 @@ class NewAction extends TaskChangeAction
     public function checkNecessity()
     {
         /*  */
-        return $this->task->isNewRecord & $this->task->performer_id;
+        return $this->task->isNewRecord && $this->task->performer_id;
     }
 
     public function execute()

@@ -22,11 +22,11 @@ class UnassignedFromAction extends TaskChangeAction
     public function checkNecessity()
     {
         $oldPerformer = $this->task->getOldAttribute('performer_id');
-        $newPerformer = $this->performer_id;
+        $newPerformer = $this->task->performer_id;
 
         return (
-            $this->task->isAttributeChanged('performer_id') &
-            $oldPerformer !== NULL &
+            $this->task->isAttributeChanged('performer_id') &&
+            $oldPerformer !== NULL &&
             $oldPerformer !== $newPerformer
         );
 

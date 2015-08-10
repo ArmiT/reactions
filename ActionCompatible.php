@@ -8,14 +8,14 @@
 namespace reaction_system;
 
 /**
- * Используется для реализации действий реации
+ * Используется для реализации действий реакции
  * Interface ActionCompatibility
  * @package reaction_system
  */
 interface ActionCompatible
 {
     /**
-     * проверяет соблюдение условий оружения
+     * проверяет соблюдение условий окружения
      * @return bool
      */
     public function checkNecessity();

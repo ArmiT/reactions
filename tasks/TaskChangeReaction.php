@@ -34,7 +34,7 @@ class TaskChangeReaction extends Reaction
     }
 
     /**
-     * Для actions есть статус isHAndled
+     * Для actions есть статус isHandled
      * Логично добавить actions stack для обработки событий:
      * beforeAction
      * afterAction
