@@ -1,22 +1,21 @@
 <?php
+
 /**
- *
  * @author Артем
  * @date 10.08.2015
  * @project reaction_system
+ *
  * @package
  * @subpackage
  */
 
 namespace reaction_system\tasks\actions;
 
-
 use reaction_system\ActionCompatible;
 use reaction_system\ReactionCompatible;
 
 abstract class TaskChangeAction implements ActionCompatible
 {
-
     const NOTIFY_ASSIGNED_TO_YOU = 0x01;
 
     const NOTIFY_UNASSIGNED_FROM_YOU = 0x02;
@@ -33,10 +32,13 @@ abstract class TaskChangeAction implements ActionCompatible
 
     protected $isHandled = false;
 
-    public function __construct(ReactionCompatible $reaction, $task, $relevantAttributes)
-    {
-        $this->reaction = $reaction;
-        $this->task = $task;
+    public function __construct(
+        ReactionCompatible $reaction,
+        $task,
+        $relevantAttributes
+    ) {
+        $this->reaction           = $reaction;
+        $this->task               = $task;
         $this->relevantAttributes = $relevantAttributes;
     }
 
@@ -44,5 +46,4 @@ abstract class TaskChangeAction implements ActionCompatible
     {
         return $this->isHandled;
     }
-
 }

@@ -1,22 +1,20 @@
 <?php
+
 /**
- *
  * @author Артем
  * @date 10.08.2015
  * @project reaction_system
+ *
  * @package
  * @subpackage
  */
 
 namespace reaction_system\tasks;
 
-
 use reaction_system\Reaction;
-use reaction_system\tasks\actions;
 
 class TaskChangeReaction extends Reaction
 {
-
     private $task;
 
     protected $relevantAttributes = [
@@ -41,7 +39,8 @@ class TaskChangeReaction extends Reaction
      * beforeAction
      * afterAction
      * errorAction
-     * Тогда цепочку обработки можно прерывать выполняя afterActions безусловно
+     * Тогда цепочку обработки можно прерывать выполняя afterActions безусловно.
+     *
      * @return array
      */
     public function getActions()

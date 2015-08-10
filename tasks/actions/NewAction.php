@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author ArmiT
  * @date 10.08.2015
@@ -8,8 +9,8 @@
 namespace reaction_system\tasks\actions;
 
 /**
+ * Class NewAction.
  *
- * Class NewAction
  * @package reaction_system\tasks\actions
  */
 class NewAction extends TaskChangeAction
@@ -22,7 +23,10 @@ class NewAction extends TaskChangeAction
 
     public function execute()
     {
-        $this->reaction->set($this->task->performer_id, TaskChangeAction::NOTIFY_ASSIGNED_TO_YOU);
+        $this->reaction->set(
+            $this->task->performer_id,
+            TaskChangeAction::NOTIFY_ASSIGNED_TO_YOU
+        );
         $this->isHandled = true;
     }
 }
