@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @author Àðòåì
+ * @author ÐÑ€Ñ‚ÐµÐ¼
  * @date 10.08.2015
  * @project reaction_system
  * @package

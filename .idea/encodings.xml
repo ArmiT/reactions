@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ActionCompatible.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Reaction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReactionCompatible.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/TaskChangeAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/TaskChangeReaction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/AssignedToAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/MultipleChangesAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/NewAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/SendSmsAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/StatusChangedAction.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tasks/actions/UnassignedFromAction.php" charset="UTF-8" />
+  </component>
+</project>

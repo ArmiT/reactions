@@ -25,8 +25,8 @@ class StatusChangedAction extends TaskChangeAction
         $this->reaction->set($this->task->author_id, TaskChangeAction::NOTIFY_STATUS_UPDATED);
 
         /*
-            Âîîáùå äëÿ ïðîâåðêè íàëè÷èÿ ïåðôîðìåðà äëÿ îòïðàâêè åìó óâåäîìëåíèÿ î ñìåíå ñòàòóñà íóæíî ñîçäàâàòü
-            îòäåëüíûé Action
+            Ð’Ð¾Ð¾Ð±Ñ‰Ðµ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¸ Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ñ Ð¿ÐµÑ€Ñ„Ð¾Ñ€Ð¼ÐµÑ€Ð° Ð´Ð»Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²ÐºÐ¸ ÐµÐ¼Ñƒ ÑƒÐ²ÐµÐ´Ð¾Ð¼Ð»ÐµÐ½Ð¸Ñ Ð¾ ÑÐ¼ÐµÐ½Ðµ ÑÑ‚Ð°Ñ‚ÑƒÑÐ° Ð½ÑƒÐ¶Ð½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð²Ð°Ñ‚ÑŒ
+            Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Action
          */
         if($this->task->performer_id !== null)
             $this->reaction->set($this->task->performer_id, TaskChangeAction::NOTIFY_STATUS_UPDATED);

@@ -8,26 +8,26 @@
 namespace reaction_system;
 
 /**
- * Используется для реализации реакции
+ * РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё СЂРµР°РєС†РёРё
  * Interface ReactionCompatible
  * @package reaction_system
  */
 interface ReactionCompatible
 {
     /**
-     * Возвращает набор действий - фабричный метод
+     * Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅР°Р±РѕСЂ РґРµР№СЃС‚РІРёР№ - С„Р°Р±СЂРёС‡РЅС‹Р№ РјРµС‚РѕРґ
      * @return ActionCompatible[]
      */
     public function getActions();
 
     /**
-     * Выполнение реакции
+     * Р’С‹РїРѕР»РЅРµРЅРёРµ СЂРµР°РєС†РёРё
      * @return mixed
      */
     public function execute();
 
     /**
-     * Устанавливает параметр реакции
+     * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїР°СЂР°РјРµС‚СЂ СЂРµР°РєС†РёРё
      * @param $key
      * @param $value
      * @return mixed
@@ -35,7 +35,7 @@ interface ReactionCompatible
     public function set($key, $value);
 
     /**
-     * Возвращает параметр реакции или default
+     * Р’РѕР·РІСЂР°С‰Р°РµС‚ РїР°СЂР°РјРµС‚СЂ СЂРµР°РєС†РёРё РёР»Рё default
      * @param $key
      * @param $default
      * @return mixed
@@ -43,7 +43,7 @@ interface ReactionCompatible
     public function get($key, $default);
 
     /**
-     * Возвращает список параметров реакции
+     * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ СЂРµР°РєС†РёРё
      * @return mixed
      */
     public function getList();

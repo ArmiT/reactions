@@ -8,7 +8,7 @@
 namespace reaction_system;
 
 /**
- * Конкретная реализация реакции
+ * РљРѕРЅРєСЂРµС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЂРµР°РєС†РёРё
  * Class Reaction
  * @package reaction_system
  */
@@ -16,7 +16,7 @@ abstract class Reaction implements ReactionCompatible
 {
 
     /**
-     * Параметры реакции
+     * РџР°СЂР°РјРµС‚СЂС‹ СЂРµР°РєС†РёРё
      * @var []
      */
     private $envParams;
@@ -37,7 +37,7 @@ abstract class Reaction implements ReactionCompatible
                 }
 
             } catch (\Exception $e) {
-                /* Здесь может быть вызов некого ErrorAction - как свойства Reaction */
+                /* Р—РґРµСЃСЊ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІС‹Р·РѕРІ РЅРµРєРѕРіРѕ ErrorAction - РєР°Рє СЃРІРѕР№СЃС‚РІР° Reaction */
             }
         }
     }

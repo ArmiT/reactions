@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @author Àðòåì
+ * @author ÐÑ€Ñ‚ÐµÐ¼
  * @date 10.08.2015
  * @project reaction_system
  * @package
@@ -34,12 +34,12 @@ class TaskChangeReaction extends Reaction
     }
 
     /**
-     * Äëÿ actions åñòü ñòàòóñ isHAndled
-     * Ëîãè÷íî äîáàâèòü actions stack äëÿ îáðàáîòêè ñîáûòèé:
+     * Ð”Ð»Ñ actions ÐµÑÑ‚ÑŒ ÑÑ‚Ð°Ñ‚ÑƒÑ isHAndled
+     * Ð›Ð¾Ð³Ð¸Ñ‡Ð½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ actions stack Ð´Ð»Ñ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ð¹:
      * beforeAction
      * afterAction
      * errorAction
-     * Òîãäà öåïî÷êó îáðàáîòêè ìîæíî ïðåðûâàòü âûïîëíÿÿ afterActions áåçóñëîâíî
+     * Ð¢Ð¾Ð³Ð´Ð° Ñ†ÐµÐ¿Ð¾Ñ‡ÐºÑƒ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ñ€ÐµÑ€Ñ‹Ð²Ð°Ñ‚ÑŒ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÑÑ afterActions Ð±ÐµÐ·ÑƒÑÐ»Ð¾Ð²Ð½Ð¾
      * @return array
      */
     public function getActions()
@@ -50,7 +50,7 @@ class TaskChangeReaction extends Reaction
             new actions\StatusChangedAction($this, $this->task, $this->relevantAttributes),
             new actions\AssignedToAction($this, $this->task, $this->relevantAttributes),
             new actions\UnassignedFromAction($this, $this->task, $this->relevantAttributes),
-            /* Íà ñàìîì äåëå, ìàññèâ ôîðìèðóåòñÿ íà îñíîâå íàñòðîåê ïðèëîæåíèÿ. ò.ê. ìîãóò áûòü äðóãèå ñåíäåðû */
+            /* ÐÐ° ÑÐ°Ð¼Ð¾Ð¼ Ð´ÐµÐ»Ðµ, Ð¼Ð°ÑÑÐ¸Ð² Ñ„Ð¾Ñ€Ð¼Ð¸Ñ€ÑƒÐµÑ‚ÑÑ Ð½Ð° Ð¾ÑÐ½Ð¾Ð²Ðµ Ð½Ð°ÑÑ‚Ñ€Ð¾ÐµÐº Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ. Ñ‚.Ðº. Ð¼Ð¾Ð³ÑƒÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð´Ñ€ÑƒÐ³Ð¸Ðµ ÑÐµÐ½Ð´ÐµÑ€Ñ‹ */
             new actions\SendSmsAction($this, $this->task, $this->relevantAttributes),
         ];
     }

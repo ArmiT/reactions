@@ -8,26 +8,26 @@
 namespace reaction_system;
 
 /**
- * Используется для реализации действий реации
+ * РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё РґРµР№СЃС‚РІРёР№ СЂРµР°С†РёРё
  * Interface ActionCompatibility
  * @package reaction_system
  */
 interface ActionCompatible
 {
     /**
-     * проверяет соблюдение условий оружения
+     * РїСЂРѕРІРµСЂСЏРµС‚ СЃРѕР±Р»СЋРґРµРЅРёРµ СѓСЃР»РѕРІРёР№ РѕСЂСѓР¶РµРЅРёСЏ
      * @return bool
      */
     public function checkNecessity();
 
     /**
-     * Выполняет действие
+     * Р’С‹РїРѕР»РЅСЏРµС‚ РґРµР№СЃС‚РІРёРµ
      * @return mixed
      */
     public function execute();
 
     /**
-     * если истинно, обработка цепочки прерывается
+     * РµСЃР»Рё РёСЃС‚РёРЅРЅРѕ, РѕР±СЂР°Р±РѕС‚РєР° С†РµРїРѕС‡РєРё РїСЂРµСЂС‹РІР°РµС‚СЃСЏ
      * @return mixed
      */
     public function isHandled();

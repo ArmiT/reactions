@@ -2,7 +2,7 @@
 
 /**
  *
- * @author Артем
+ * @author РђСЂС‚РµРј
  * @date 10.08.2015
  * @project reaction_system
  * @package
@@ -12,7 +12,7 @@
 namespace reaction_system\tasks\actions;
 
 /**
- * Проверяет
+ * РџСЂРѕРІРµСЂСЏРµС‚
  * Class AssignToMeAction
  * @package reaction_system\tasks\actions
  */
