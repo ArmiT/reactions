@@ -27,10 +27,12 @@ class TaskChangeReaction extends Reaction
         'performer_id',
     ];
 
-    public function __construct($task, $relevantAttributes = [])
+    public function __construct($task, array $relevantAttributes = [])
     {
         $this->task = $task;
-        $this->relevantAttributes = !count($relevantAttributes)?: $relevantAttributes;
+        if ($relevantAttributes) {
+            $this->relevantAttributes = $relevantAttributes;
+        }
     }
 
     /**

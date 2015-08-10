@@ -44,7 +44,7 @@ interface ReactionCompatible
 
     /**
      * Возвращает список параметров реакции
-     * @return mixed
+     * @return array
      */
     public function getList();
 

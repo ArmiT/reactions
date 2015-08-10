@@ -17,7 +17,10 @@ class MultipleChangesAction extends TaskChangeAction
 
     public function checkNecessity()
     {
-        return ($this->task->getDirtyAttributes($this->relevantAttributes) > 1);
+        $dirtyAttributes =
+            $this->task->getDirtyAttributes($this->relevantAttributes);
+
+        return \count($dirtyAttributes) > 1;
     }
 
     public function execute()
