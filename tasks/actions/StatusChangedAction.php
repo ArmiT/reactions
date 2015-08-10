@@ -8,6 +8,8 @@
 
 namespace reaction_system\tasks\actions;
 
+use reaction_system\tasks\TaskChangeAction;
+
 /**
  * Class AssignToMeAction.
  *

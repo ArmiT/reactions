@@ -9,7 +9,7 @@
  * @subpackage
  */
 
-namespace reaction_system\tasks\actions;
+namespace reaction_system\tasks;
 
 use reaction_system\ActionCompatible;
 use reaction_system\ReactionCompatible;
