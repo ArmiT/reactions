@@ -3,17 +3,17 @@
 /**
  * @author ArmiT
  * @date 10.08.2015
- * @project reaction_system
+ * @project cncltd\reactions
  */
 
-namespace reaction_system\tasks\actions;
+namespace cncltd\reactions\tasks\actions;
 
-use reaction_system\tasks\TaskChangeAction;
+use cncltd\reactions\tasks\TaskChangeAction;
 
 /**
  * Class MultipleChangesAction.
  *
- * @package reaction_system\tasks\actions
+ * @package cncltd\reactions\tasks\actions
  */
 class MultipleChangesAction extends TaskChangeAction
 {

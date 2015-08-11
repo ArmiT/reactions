@@ -3,16 +3,16 @@
 /**
  * @author Armit
  * @date 10.08.2015
- * @project reaction_system
+ * @project cncltd\reactions
  */
 
-namespace reaction_system;
+namespace cncltd\reactions;
 
 /**
  * Конкретная реализация реакции
  * Class Reaction.
  *
- * @package reaction_system
+ * @package cncltd\reactions
  */
 abstract class Reaction implements ReactionCompatible
 {

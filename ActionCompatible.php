@@ -3,16 +3,16 @@
 /**
  * @author ArmiT
  * @date 10.08.2015
- * @project reaction_system
+ * @project cncltd\reactions
  */
 
-namespace reaction_system;
+namespace cncltd\reactions;
 
 /**
  * Используется для реализации действий реакции
  * Interface ActionCompatibility.
  *
- * @package reaction_system
+ * @package cncltd\reactions
  */
 interface ActionCompatible
 {

@@ -3,15 +3,15 @@
 /**
  * @author Артем
  * @date 10.08.2015
- * @project reaction_system
+ * @project cncltd\reactions
  *
  * @package
  * @subpackage
  */
 
-namespace reaction_system\tasks;
+namespace cncltd\reactions\tasks;
 
-use reaction_system\Reaction;
+use cncltd\reactions\Reaction;
 
 class TaskChangeReaction extends Reaction
 {
