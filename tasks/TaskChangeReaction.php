@@ -1,22 +1,20 @@
 <?php
+
 /**
- *
  * @author Артем
  * @date 10.08.2015
  * @project reaction_system
+ *
  * @package
  * @subpackage
  */
 
 namespace reaction_system\tasks;
 
-
 use reaction_system\Reaction;
-use reaction_system\tasks\actions;
 
 class TaskChangeReaction extends Reaction
 {
-
     private $task;
 
     protected $relevantAttributes = [
@@ -27,19 +25,22 @@ class TaskChangeReaction extends Reaction
         'performer_id',
     ];
 
-    public function __construct($task, $relevantAttributes = [])
+    public function __construct($task, array $relevantAttributes = [])
     {
         $this->task = $task;
-        $this->relevantAttributes = !count($relevantAttributes)?: $relevantAttributes;
+        if ($relevantAttributes) {
+            $this->relevantAttributes = $relevantAttributes;
+        }
     }
 
     /**
-     * Для actions есть статус isHAndled
+     * Для actions есть статус isHandled
      * Логично добавить actions stack для обработки событий:
      * beforeAction
      * afterAction
      * errorAction
-     * Тогда цепочку обработки можно прерывать выполняя afterActions безусловно
+     * Тогда цепочку обработки можно прерывать выполняя afterActions безусловно.
+     *
      * @return array
      */
     public function getActions()

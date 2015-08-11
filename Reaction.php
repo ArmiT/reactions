@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author Armit
  * @date 10.08.2015
@@ -9,15 +10,16 @@ namespace reaction_system;
 
 /**
  * Конкретная реализация реакции
- * Class Reaction
+ * Class Reaction.
+ *
  * @package reaction_system
  */
 abstract class Reaction implements ReactionCompatible
 {
-
     /**
-     * Параметры реакции
-     * @var []
+     * Параметры реакции.
+     *
+     * @var array
      */
     private $envParams;
 
@@ -28,14 +30,14 @@ abstract class Reaction implements ReactionCompatible
     {
         $actions = $this->getActions();
 
-        foreach($actions as $action) {
+        foreach ($actions as $action) {
             try {
-
-                if($action->checkNecessity()) {
+                if ($action->checkNecessity()) {
                     $action->execute();
-                    if($action->isHandled()) break;
+                    if ($action->isHandled()) {
+                        break;
+                    }
                 }
-
             } catch (\Exception $e) {
                 /* Здесь может быть вызов некого ErrorAction - как свойства Reaction */
             }
@@ -55,7 +57,9 @@ abstract class Reaction implements ReactionCompatible
      */
     public function get($key, $default)
     {
-        return isset($this->envParams[$key])? $this->envParams[$key]: $default;
+        return isset($this->envParams[$key])
+            ? $this->envParams[$key]
+            : $default;
     }
 
     /**
@@ -65,5 +69,4 @@ abstract class Reaction implements ReactionCompatible
     {
         return $this->envParams;
     }
-
 }
