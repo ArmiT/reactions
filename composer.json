@@ -1,0 +1,27 @@
+{
+    "name": "cncltd/reactions",
+    "description": "Reaction system implementation",
+    "keywords": ["cncltd"],
+    "homepage": "https://github.com/ArmiT/reactions",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "ArmiT",
+            "email": "armit@twinscom.ru",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ArmiT/reactions/issues",
+        "wiki": "https://github.com/ArmiT/reactions/wiki",
+        "source": "https://github.com/ArmiT/reactions"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "reaction_system\\": ""
+        }
+    }
+}
