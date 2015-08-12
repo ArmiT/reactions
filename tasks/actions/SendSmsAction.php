@@ -4,20 +4,15 @@
  * @author Артем
  * @date 10.08.2015
  * @project cncltd\reactions
- *
- * @package
- * @subpackage
  */
 
 namespace cncltd\reactions\tasks\actions;
 
 use cncltd\reactions\tasks\TaskChangeAction;
+use SmsSender;
 
 /**
- * Проверяет
- * Class AssignToMeAction.
- *
- * @package cncltd\reactions\tasks\actions
+ * Class SendSmsAction sends SMS messages to the users.
  */
 class SendSmsAction extends TaskChangeAction
 {
@@ -36,13 +31,23 @@ class SendSmsAction extends TaskChangeAction
      */
     public function execute()
     {
-        foreach ($this->reaction->getList() as $userId => $notificationName) {
-            $this->notify($userId, $notificationName);
+        foreach ($this->reaction->getList() as $userId => $notificationCode) {
+            $this->notify($userId, $notificationCode);
         }
     }
 
-    public function notify($userId, $notificationName)
+    /**
+     * Notifies a user by SMS.
+     *
+     * @param int    $userId           The ID of the user to notify.
+     * @param string $notificationCode Notification code.
+     */
+    public function notify($userId, $notificationCode)
     {
-        /* some code for sending */
+        if (!$userId) {
+            return;
+        }
+
+        SmsSender::send($userId, $notificationCode);
     }
 }

@@ -11,9 +11,8 @@ namespace cncltd\reactions\tasks\actions;
 use cncltd\reactions\tasks\TaskChangeAction;
 
 /**
- * Class NewAction.
- *
- * @package cncltd\reactions\tasks\actions
+ * Class NewAction sets "task assigned to you" notification code
+ * to the performer ID.
  */
 class NewAction extends TaskChangeAction
 {
@@ -22,7 +21,6 @@ class NewAction extends TaskChangeAction
      */
     public function checkNecessity()
     {
-        /*  */
         return $this->task->isNewRecord && $this->task->performer_id;
     }
 
@@ -35,6 +33,5 @@ class NewAction extends TaskChangeAction
             $this->task->performer_id,
             TaskChangeAction::NOTIFY_ASSIGNED_TO_YOU
         );
-        $this->isHandled = true;
     }
 }

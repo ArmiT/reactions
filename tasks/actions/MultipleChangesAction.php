@@ -11,9 +11,8 @@ namespace cncltd\reactions\tasks\actions;
 use cncltd\reactions\tasks\TaskChangeAction;
 
 /**
- * Class MultipleChangesAction.
- *
- * @package cncltd\reactions\tasks\actions
+ * Class MultipleChangesAction sets "task updated" notification code
+ * to the users' IDs.
  */
 class MultipleChangesAction extends TaskChangeAction
 {
@@ -25,7 +24,7 @@ class MultipleChangesAction extends TaskChangeAction
         $dirtyAttributes =
             $this->task->getDirtyAttributes($this->relevantAttributes);
 
-        return \count($dirtyAttributes) > 1;
+        return \count($dirtyAttributes);
     }
 
     /**
@@ -37,11 +36,9 @@ class MultipleChangesAction extends TaskChangeAction
             $this->task->author_id,
             TaskChangeAction::NOTIFY_TASK_UPDATED
         );
-        if ($this->task->performer_id !== null) {
-            $this->reaction->set(
-                $this->task->performer_id,
-                TaskChangeAction::NOTIFY_TASK_UPDATED
-            );
-        }
+        $this->reaction->set(
+            $this->task->performer_id,
+            TaskChangeAction::NOTIFY_TASK_UPDATED
+        );
     }
 }

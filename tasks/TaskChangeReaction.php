@@ -4,19 +4,26 @@
  * @author Артем
  * @date 10.08.2015
  * @project cncltd\reactions
- *
- * @package
- * @subpackage
  */
 
 namespace cncltd\reactions\tasks;
 
 use cncltd\reactions\Reaction;
+use tasks\models\Task;
 
+/**
+ * Class TaskChangeReaction notifies the users about task changes.
+ */
 class TaskChangeReaction extends Reaction
 {
+    /**
+     * @var Task The changed task.
+     */
     private $task;
 
+    /**
+     * @var array Task attributes to check for dirtyness.
+     */
     protected $relevantAttributes = [
         'title',
         'description',
@@ -25,10 +32,14 @@ class TaskChangeReaction extends Reaction
         'performer_id',
     ];
 
-    public function __construct($task, array $relevantAttributes = [])
+    /**
+     * @param Task  $task               The changed task.
+     * @param array $relevantAttributes Task attributes to check for dirtyness.
+     */
+    public function __construct(Task $task, array $relevantAttributes = null)
     {
         $this->task = $task;
-        if ($relevantAttributes) {
+        if ($relevantAttributes !== null) {
             $this->relevantAttributes = $relevantAttributes;
         }
     }
@@ -46,13 +57,31 @@ class TaskChangeReaction extends Reaction
     public function getActions()
     {
         return [
-            new actions\MultipleChangesAction($this, $this->task, $this->relevantAttributes),
-            new actions\NewAction($this, $this->task, $this->relevantAttributes),
-            new actions\StatusChangedAction($this, $this->task, $this->relevantAttributes),
-            new actions\AssignedToAction($this, $this->task, $this->relevantAttributes),
-            new actions\UnassignedFromAction($this, $this->task, $this->relevantAttributes),
-            /* На самом деле, массив формируется на основе настроек приложения. т.к. могут быть другие сендеры */
-            new actions\SendSmsAction($this, $this->task, $this->relevantAttributes),
+            new actions\MultipleChangesAction(
+                $this,
+                $this->task,
+                $this->relevantAttributes
+            ),
+            new actions\StatusChangedAction(
+                $this,
+                $this->task,
+                $this->relevantAttributes
+            ),
+            new actions\ReassignedAction(
+                $this,
+                $this->task,
+                $this->relevantAttributes
+            ),
+            new actions\NewAction(
+                $this,
+                $this->task,
+                $this->relevantAttributes
+            ),
+            new actions\SendSmsAction(
+                $this,
+                $this->task,
+                $this->relevantAttributes
+            ),
         ];
     }
 }
