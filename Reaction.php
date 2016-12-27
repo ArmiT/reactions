@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @author Armit
  * @date 10.08.2015
@@ -11,8 +13,6 @@ namespace cncltd\reactions;
 /**
  * Конкретная реализация реакции
  * Class Reaction.
- *
- * @package cncltd\reactions
  */
 abstract class Reaction implements ReactionCompatible
 {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @author Артем
  * @date 10.08.2015
@@ -68,8 +70,8 @@ abstract class TaskChangeAction implements ActionCompatible
         Task $task,
         array $relevantAttributes
     ) {
-        $this->reaction           = $reaction;
-        $this->task               = $task;
+        $this->reaction = $reaction;
+        $this->task = $task;
         $this->relevantAttributes = $relevantAttributes;
     }
 
