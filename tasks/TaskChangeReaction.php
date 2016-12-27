@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @author Артем
  * @date 10.08.2015
@@ -17,11 +19,6 @@ use tasks\models\Task;
 class TaskChangeReaction extends Reaction
 {
     /**
-     * @var Task The changed task.
-     */
-    private $task;
-
-    /**
      * @var array Task attributes to check for dirtyness.
      */
     protected $relevantAttributes = [
@@ -31,6 +28,11 @@ class TaskChangeReaction extends Reaction
         'status_id',
         'performer_id',
     ];
+
+    /**
+     * @var Task The changed task.
+     */
+    private $task;
 
     /**
      * @param Task  $task               The changed task.

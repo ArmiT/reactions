@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @author ArmiT
  * @date 10.08.2015
@@ -11,8 +13,6 @@ namespace cncltd\reactions;
 /**
  * Используется для реализации реакции
  * Interface ReactionCompatible.
- *
- * @package cncltd\reactions
  */
 interface ReactionCompatible
 {

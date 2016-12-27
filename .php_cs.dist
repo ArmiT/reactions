@@ -1,0 +1,55 @@
+<?php
+
+declare(strict_types=1);
+
+$finder = PhpCsFixer\Finder::create()
+    ->in(__DIR__);
+
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@PSR1' => true,
+        '@PSR2' => true,
+        '@Symfony' => true,
+        '@Symfony:risky' => true,
+        '@PHP70Migration' => true,
+
+        'array_syntax' => ['syntax' => 'short'], // PHP arrays should be declared using the configured syntax (requires PHP>= 5.4 for short syntax). Rule is: configurable.
+        'combine_consecutive_unsets' => true, // Calling unset on multiple items should be done in one call.
+        'declare_strict_types' => true, // Force strict types declaration in all files. Requires PHP >= 7.0. Rule is: risky.
+        'dir_constant' => true, // Replaces dirname(__FILE__) expression with equivalent __DIR__ constant. Rule is: risky.
+        'ereg_to_preg' => true, // Replace deprecated ereg regular expression functions with preg. Rule is: risky.
+        'linebreak_after_opening_tag' => true, // Ensure there is no code on the same line as the PHP open tag.
+        'mb_str_functions' => true, // Replace non multibyte-safe functions with corresponding mb function. Rule is: risky.
+        'modernize_types_casting' => true, // Replaces intval, floatval, doubleval, strval, boolval functions calls with according type casting operator. Rule is: risky.
+        'no_multiline_whitespace_before_semicolons' => true, // Multi-line whitespace before closing semicolon are prohibited.
+        'no_php4_constructor' => true, // Convert PHP4-style constructors to __construct. Rule is: risky.
+        'no_useless_else' => true, // There should not be useless else cases.
+        'no_useless_return' => true, // There should not be an empty return statement at the end of a function.
+        'ordered_class_elements' => true, // Orders the elements of classes/interfaces/traits. Rule is: configurable.
+        'ordered_imports' => true, // Ordering use statements.
+        'php_unit_strict' => true, // PHPUnit methods like "assertSame" should be used instead of"assertEquals". Rule is: configurable, risky.
+        'phpdoc_add_missing_param_annotation' => true, // Phpdoc should contain @param for all params. Rule is: configurable.
+        'phpdoc_order' => true, // Annotations in phpdocs should be ordered so that param annotations come first, then throws annotations, then return annotations.
+        'protected_to_private' => true, // Converts protected variables and methods to private where possible.
+        'psr4' => true, // Class names should match the file name. Rule is: risky.
+        'simplified_null_return' => true, // A return statement wishing to return "void" should not return "null". Rule is: risky.
+        'strict_comparison' => true, // Comparisons should be strict. Rule is: risky.
+        'strict_param' => true, // Functions should be used with $strict param. Rule is: risky.
+
+        'class_keyword_remove' => false, // Converts ::class keywords to FQCN strings.
+        'general_phpdoc_annotation_remove' => false, // Configured annotations should be omitted from phpdocs. Rule is: configurable.
+        'header_comment' => false, // Add, replace or remove header comment. Rule is: configurable.
+        'psr0' => false, // Classes must be in a path that matches their namespace, be at least onenamespace deep and the class name should match the file name. Rule is: configurable, risky.
+        'no_blank_lines_before_namespace' => false, // There should be no blank lines before a namespace declaration.
+        'no_short_echo_tag' => false, // Replace short-echo <?= with long format <?php echo syntax.
+        'not_operator_with_space' => false, // Logical NOT operators (!) should have leading and trailing whitespaces.
+        'not_operator_with_successor_space' => false, // Logical NOT operators (!) should have one trailing whitespace.
+
+        'phpdoc_annotation_without_dot' => false, // Phpdocs annotation descriptions should not be a sentence.
+        'phpdoc_align' => false, // All items of the @param, @throws, @return, @var, and @type phpdoc tags must be aligned vertically.
+        'semicolon_after_instruction' => false, // Instructions must be terminated with a semicolon.
+        'php_unit_fqcn_annotation' => false, // PHPUnit annotations should be a FQCNs including a root namespace.
+    ])
+    ->setRiskyAllowed(true)
+    ->setUsingCache(false)
+    ->setFinder($finder);
