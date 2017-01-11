@@ -31,15 +31,11 @@ abstract class Reaction implements ReactionCompatible
         $actions = $this->getActions();
 
         foreach ($actions as $action) {
-            try {
-                if ($action->checkNecessity()) {
-                    $action->execute();
-                    if ($action->isHandled()) {
-                        break;
-                    }
+            if ($action->checkNecessity()) {
+                $action->execute();
+                if ($action->isHandled()) {
+                    break;
                 }
-            } catch (\Exception $e) {
-                /* Здесь может быть вызов некого ErrorAction - как свойства Reaction */
             }
         }
     }
