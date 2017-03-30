@@ -56,4 +56,13 @@ interface ReactionCompatible
      * @return array
      */
     public function getList();
+
+    /**
+     * envParams setter.
+     *
+     * @param array $envParams New envParams.
+     *
+     * @return mixed
+     */
+    public function setEnvParams(array $envParams);
 }
