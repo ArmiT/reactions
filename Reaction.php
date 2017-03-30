@@ -65,4 +65,14 @@ abstract class Reaction implements ReactionCompatible
     {
         return $this->envParams;
     }
+
+    /**
+     * envParams setter.
+     *
+     * @param array $envParams New envParams.
+     */
+    public function setEnvParams($envParams)
+    {
+        $this->envParams = $envParams;
+    }
 }
