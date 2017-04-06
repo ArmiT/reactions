@@ -21,7 +21,7 @@ abstract class Reaction implements ReactionCompatible
      *
      * @var array
      */
-    private $envParams;
+    private $envParams = [];
 
     /**
      * {@inheritdoc}
