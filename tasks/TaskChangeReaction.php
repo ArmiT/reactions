@@ -19,7 +19,7 @@ use tasks\models\Task;
 class TaskChangeReaction extends Reaction
 {
     /**
-     * @var array Task attributes to check for dirtyness.
+     * @var array task attributes to check for dirtyness
      */
     protected $relevantAttributes = [
         'title',
@@ -30,17 +30,18 @@ class TaskChangeReaction extends Reaction
     ];
 
     /**
-     * @var Task The changed task.
+     * @var Task the changed task
      */
     private $task;
 
     /**
-     * @param Task  $task               The changed task.
-     * @param array $relevantAttributes Task attributes to check for dirtyness.
+     * @param Task  $task               the changed task
+     * @param array $relevantAttributes task attributes to check for dirtyness
      */
     public function __construct(Task $task, array $relevantAttributes = null)
     {
         $this->task = $task;
+
         if ($relevantAttributes !== null) {
             $this->relevantAttributes = $relevantAttributes;
         }

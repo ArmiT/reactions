@@ -33,6 +33,7 @@ abstract class Reaction implements ReactionCompatible
         foreach ($actions as $action) {
             if ($action->checkNecessity()) {
                 $action->execute();
+
                 if ($action->isHandled()) {
                     break;
                 }

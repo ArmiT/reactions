@@ -22,48 +22,48 @@ abstract class TaskChangeAction implements ActionCompatible
     /**
      * The "task assigned to you" notification code.
      */
-    const NOTIFY_ASSIGNED_TO_YOU = 0x01;
+    public const NOTIFY_ASSIGNED_TO_YOU = 0x01;
 
     /**
      * The "task unassigned from you" notification code.
      */
-    const NOTIFY_UNASSIGNED_FROM_YOU = 0x02;
+    public const NOTIFY_UNASSIGNED_FROM_YOU = 0x02;
 
     /**
      * The "task updated" notification code.
      */
-    const NOTIFY_TASK_UPDATED = 0x03;
+    public const NOTIFY_TASK_UPDATED = 0x03;
 
     /**
      * The "task status updated" notification code.
      */
-    const NOTIFY_STATUS_UPDATED = 0x04;
+    public const NOTIFY_STATUS_UPDATED = 0x04;
 
     /**
-     * @var ReactionCompatible Current reaction.
+     * @var ReactionCompatible current reaction
      */
     protected $reaction;
 
     /**
-     * @var Task The changed task.
+     * @var Task the changed task
      */
     protected $task;
 
     /**
-     * @var array Task attributes to check for dirtyness.
+     * @var array task attributes to check for dirtyness
      */
     protected $relevantAttributes;
 
     /**
-     * @var bool Value indicating whether the action is handled.
+     * @var bool value indicating whether the action is handled
      */
     protected $isHandled = false;
 
     /**
-     * @param ReactionCompatible $reaction           Reaction to act upon.
-     * @param Task               $task               The changed task.
-     * @param array              $relevantAttributes Task attributes
-     *                                               to check for dirtyness.
+     * @param ReactionCompatible $reaction           reaction to act upon
+     * @param Task               $task               the changed task
+     * @param array              $relevantAttributes task attributes
+     *                                               to check for dirtyness
      */
     public function __construct(
         ReactionCompatible $reaction,

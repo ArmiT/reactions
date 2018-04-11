@@ -60,7 +60,7 @@ interface ReactionCompatible
     /**
      * envParams setter.
      *
-     * @param array $envParams New envParams.
+     * @param array $envParams new envParams
      *
      * @return mixed
      */

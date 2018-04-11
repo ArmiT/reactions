@@ -41,8 +41,8 @@ class SendSmsAction extends TaskChangeAction
     /**
      * Notifies a user by SMS.
      *
-     * @param int    $userId           The ID of the user to notify.
-     * @param string $notificationCode Notification code.
+     * @param int    $userId           the ID of the user to notify
+     * @param string $notificationCode notification code
      */
     public function notify($userId, $notificationCode)
     {
