@@ -31,7 +31,7 @@ class SendSmsAction extends TaskChangeAction
     /**
      * {@inheritdoc}
      */
-    public function execute()
+    public function execute(): void
     {
         foreach ($this->reaction->getList() as $userId => $notificationCode) {
             $this->notify($userId, $notificationCode);
@@ -44,7 +44,7 @@ class SendSmsAction extends TaskChangeAction
      * @param int    $userId           the ID of the user to notify
      * @param string $notificationCode notification code
      */
-    public function notify($userId, $notificationCode)
+    public function notify($userId, $notificationCode): void
     {
         if (!$userId) {
             return;
