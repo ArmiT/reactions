@@ -33,7 +33,7 @@ class StatusChangedAction extends TaskChangeAction
     /**
      * {@inheritdoc}
      */
-    public function execute()
+    public function execute(): void
     {
         $this->reaction->set(
             $this->task->author_id,

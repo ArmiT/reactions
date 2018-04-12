@@ -26,7 +26,7 @@ abstract class Reaction implements ReactionCompatible
     /**
      * {@inheritdoc}
      */
-    public function execute()
+    public function execute(): void
     {
         $actions = $this->getActions();
 
@@ -44,7 +44,7 @@ abstract class Reaction implements ReactionCompatible
     /**
      * {@inheritdoc}
      */
-    public function set($key, $value)
+    public function set($key, $value): void
     {
         $this->envParams[$key] = $value;
     }
@@ -70,7 +70,7 @@ abstract class Reaction implements ReactionCompatible
     /**
      * {@inheritdoc}
      */
-    public function setEnvParams(array $envParams)
+    public function setEnvParams(array $envParams): void
     {
         $this->envParams = $envParams;
     }
