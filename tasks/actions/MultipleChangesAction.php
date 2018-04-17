@@ -18,9 +18,6 @@ use cncltd\reactions\tasks\TaskChangeAction;
  */
 class MultipleChangesAction extends TaskChangeAction
 {
-    /**
-     * {@inheritdoc}
-     */
     public function checkNecessity()
     {
         $dirtyAttributes =
@@ -29,9 +26,6 @@ class MultipleChangesAction extends TaskChangeAction
         return \count($dirtyAttributes);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function execute(): void
     {
         $this->reaction->set(

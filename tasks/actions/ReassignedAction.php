@@ -19,17 +19,11 @@ use cncltd\reactions\tasks\TaskChangeAction;
  */
 class ReassignedAction extends TaskChangeAction
 {
-    /**
-     * {@inheritdoc}
-     */
     public function checkNecessity()
     {
         return $this->task->isAttributeChanged('performer_id');
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function execute(): void
     {
         $this->reaction->set(

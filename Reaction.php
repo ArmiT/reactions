@@ -23,9 +23,6 @@ abstract class Reaction implements ReactionCompatible
      */
     private $envParams = [];
 
-    /**
-     * {@inheritdoc}
-     */
     public function execute(): void
     {
         $actions = $this->getActions();
@@ -41,17 +38,11 @@ abstract class Reaction implements ReactionCompatible
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function set($key, $value): void
     {
         $this->envParams[$key] = $value;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function get($key, $default)
     {
         return isset($this->envParams[$key])
@@ -59,17 +50,11 @@ abstract class Reaction implements ReactionCompatible
             : $default;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getList()
     {
         return $this->envParams;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setEnvParams(array $envParams): void
     {
         $this->envParams = $envParams;

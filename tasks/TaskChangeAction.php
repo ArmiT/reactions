@@ -75,9 +75,6 @@ abstract class TaskChangeAction implements ActionCompatible
         $this->relevantAttributes = $relevantAttributes;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function isHandled()
     {
         return $this->isHandled;
