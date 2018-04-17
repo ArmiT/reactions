@@ -18,9 +18,6 @@ use cncltd\reactions\tasks\TaskChangeAction;
  */
 class StatusChangedAction extends TaskChangeAction
 {
-    /**
-     * {@inheritdoc}
-     */
     public function checkNecessity()
     {
         $dirtyAttributes =
@@ -30,9 +27,6 @@ class StatusChangedAction extends TaskChangeAction
             $this->task->isAttributeChanged('status_id');
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function execute(): void
     {
         $this->reaction->set(

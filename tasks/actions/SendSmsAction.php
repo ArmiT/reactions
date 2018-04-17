@@ -18,9 +18,6 @@ use SmsSender;
  */
 class SendSmsAction extends TaskChangeAction
 {
-    /**
-     * {@inheritdoc}
-     */
     public function checkNecessity()
     {
         return (bool) \count(
@@ -28,9 +25,6 @@ class SendSmsAction extends TaskChangeAction
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function execute(): void
     {
         foreach ($this->reaction->getList() as $userId => $notificationCode) {
