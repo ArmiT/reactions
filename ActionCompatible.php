@@ -17,7 +17,7 @@ namespace cncltd\reactions;
 interface ActionCompatible
 {
     /**
-     * проверяет соблюдение условий окружения.
+     * Проверяет соблюдение условий окружения.
      *
      * @return bool
      */
@@ -31,7 +31,7 @@ interface ActionCompatible
     public function execute();
 
     /**
-     * если истинно, обработка цепочки прерывается.
+     * Если истинно, обработка цепочки прерывается.
      *
      * @return mixed
      */
