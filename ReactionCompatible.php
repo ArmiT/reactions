@@ -58,7 +58,7 @@ interface ReactionCompatible
     public function getList();
 
     /**
-     * envParams setter.
+     * The envParams setter.
      *
      * @param array $envParams new envParams
      *
