@@ -14,8 +14,9 @@ class MultipleChangesAction extends TaskChangeAction
 {
     public function checkNecessity()
     {
-        $dirtyAttributes =
-            $this->task->getDirtyAttributes($this->relevantAttributes);
+        $dirtyAttributes = $this->task->getDirtyAttributes(
+            $this->relevantAttributes
+        );
 
         return \count($dirtyAttributes);
     }
