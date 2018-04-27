@@ -20,8 +20,9 @@ class StatusChangedAction extends TaskChangeAction
 {
     public function checkNecessity()
     {
-        $dirtyAttributes =
-            $this->task->getDirtyAttributes($this->relevantAttributes);
+        $dirtyAttributes = $this->task->getDirtyAttributes(
+            $this->relevantAttributes
+        );
 
         return \count($dirtyAttributes) === 1 &&
             $this->task->isAttributeChanged('status_id');
