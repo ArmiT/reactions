@@ -32,7 +32,7 @@ class SendSmsAction extends TaskChangeAction
      * @param int    $userId           the ID of the user to notify
      * @param string $notificationCode notification code
      */
-    public function notify($userId, $notificationCode): void
+    public function notify(int $userId, string $notificationCode): void
     {
         if (!$userId) {
             return;

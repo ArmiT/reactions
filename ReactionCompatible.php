@@ -27,8 +27,8 @@ interface ReactionCompatible
     /**
      * Устанавливает параметр реакции.
      *
-     * @param $key
-     * @param $value
+     * @param mixed $key
+     * @param mixed $value
      *
      * @return mixed
      */
@@ -37,8 +37,8 @@ interface ReactionCompatible
     /**
      * Возвращает параметр реакции или default.
      *
-     * @param $key
-     * @param $default
+     * @param mixed $key
+     * @param mixed $default
      *
      * @return mixed
      */
