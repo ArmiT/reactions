@@ -39,9 +39,7 @@ abstract class Reaction implements ReactionCompatible
 
     public function get($key, $default)
     {
-        return isset($this->envParams[$key])
-            ? $this->envParams[$key]
-            : $default;
+        return $this->envParams[$key] ?? $default;
     }
 
     public function getList()
