@@ -18,7 +18,7 @@ class MultipleChangesAction extends TaskChangeAction
             $this->relevantAttributes
         );
 
-        return \count($dirtyAttributes);
+        return count($dirtyAttributes);
     }
 
     public function execute(): void
