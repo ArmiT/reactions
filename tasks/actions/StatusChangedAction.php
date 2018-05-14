@@ -18,7 +18,7 @@ class StatusChangedAction extends TaskChangeAction
             $this->relevantAttributes
         );
 
-        return \count($dirtyAttributes) === 1 &&
+        return count($dirtyAttributes) === 1 &&
             $this->task->isAttributeChanged('status_id');
     }
 

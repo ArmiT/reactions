@@ -14,7 +14,7 @@ class SendSmsAction extends TaskChangeAction
 {
     public function checkNecessity()
     {
-        return (bool) \count(
+        return (bool) count(
             $this->reaction->getList()
         );
     }
