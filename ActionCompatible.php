@@ -15,7 +15,7 @@ interface ActionCompatible
      *
      * @return bool
      */
-    public function checkNecessity();
+    public function checkNecessity(): bool;
 
     /**
      * Выполняет действие.
