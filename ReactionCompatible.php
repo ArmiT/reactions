@@ -49,7 +49,7 @@ interface ReactionCompatible
      *
      * @return array
      */
-    public function getList();
+    public function getList(): array;
 
     /**
      * The envParams setter.

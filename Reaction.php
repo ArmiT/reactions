@@ -42,7 +42,7 @@ abstract class Reaction implements ReactionCompatible
         return $this->envParams[$key] ?? $default;
     }
 
-    public function getList()
+    public function getList(): array
     {
         return $this->envParams;
     }

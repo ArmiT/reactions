@@ -51,7 +51,7 @@ class TaskChangeReaction extends Reaction
      *
      * @return array
      */
-    public function getActions()
+    public function getActions(): array
     {
         return [
             new actions\MultipleChangesAction(
