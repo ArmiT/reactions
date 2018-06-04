@@ -12,22 +12,16 @@ interface ActionCompatible
 {
     /**
      * Проверяет соблюдение условий окружения.
-     *
-     * @return bool
      */
     public function checkNecessity(): bool;
 
     /**
      * Выполняет действие.
-     *
-     * @return mixed
      */
     public function execute();
 
     /**
      * Если истинно, обработка цепочки прерывается.
-     *
-     * @return mixed
      */
     public function isHandled();
 }

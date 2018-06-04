@@ -15,32 +15,20 @@ interface ReactionCompatible
      *
      * @return ActionCompatible[]
      */
-    public function getActions();
+    public function getActions(): array;
 
     /**
      * Выполнение реакции.
-     *
-     * @return mixed
      */
     public function execute();
 
     /**
      * Устанавливает параметр реакции.
-     *
-     * @param mixed $key
-     * @param mixed $value
-     *
-     * @return mixed
      */
     public function set($key, $value);
 
     /**
      * Возвращает параметр реакции или default.
-     *
-     * @param mixed $key
-     * @param mixed $default
-     *
-     * @return mixed
      */
     public function get($key, $default);
 
@@ -55,8 +43,6 @@ interface ReactionCompatible
      * The envParams setter.
      *
      * @param array $envParams new envParams
-     *
-     * @return mixed
      */
     public function setEnvParams(array $envParams);
 }
