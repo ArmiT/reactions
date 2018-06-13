@@ -34,8 +34,6 @@ interface ReactionCompatible
 
     /**
      * Возвращает список параметров реакции.
-     *
-     * @return array
      */
     public function getList(): array;
 
