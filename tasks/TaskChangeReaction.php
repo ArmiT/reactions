@@ -48,8 +48,6 @@ class TaskChangeReaction extends Reaction
      * afterAction
      * errorAction
      * Тогда цепочку обработки можно прерывать выполняя afterActions безусловно.
-     *
-     * @return array
      */
     public function getActions(): array
     {
